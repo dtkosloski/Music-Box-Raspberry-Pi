@@ -16,7 +16,7 @@ def main():
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(21,GPIO.IN)
     mixer.init()#initializes the audio mixer (via the constructor)
-    sound = mixer.Sound("microwave-oven-1.wav")
+    sound = mixer.Sound("C418 - Mice on Venus - Minecraft Volume Alpha.mp3")
     
     try:
         prevState = True
