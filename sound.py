@@ -13,19 +13,20 @@ def play(prevState,currentState,sound):
     return currentState # current state will become the prevState
 
 def main():
-    GPIO.setmode(GPIO.BCM)
-    GPIO.setup(21,GPIO.IN)
     mixer.init()#initializes the audio mixer (via the constructor)
-    sound = mixer.Sound("C418 - Mice on Venus - Minecraft Volume Alpha.mp3")
-    
+    sound = mixer.Sound("Mice On Venus.wav")
+    sound.play()
     try:
         prevState = True
         while True:
-            currentState = GPIO.input(21)
-            prevState = play(prevState,currentState,sound)
+            currentState = True
+            prevState =  True
+            play(prevState,currentState,sound)
         
     except KeyboardInterrupt:
         GPIO.cleanup()
+        sound.play()
+        print("Press ctrl+c to stop")
         exit()
     
 main()
