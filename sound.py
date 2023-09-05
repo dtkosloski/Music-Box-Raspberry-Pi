@@ -14,7 +14,38 @@ def play(prevState,currentState,sound):
 
 def main():
     mixer.init()#initializes the audio mixer (via the constructor)
-    sound = mixer.Sound("Mice On Venus.wav")
+    
+    Rick = False
+    print("""Pick a song! (1-8)
+             1. Song #1
+             2. Song #2
+             3. Song #3
+             4. Song #4
+             5. Song #5
+             6. Song #6
+             7. Song #7"""
+    )
+    
+    input = ("\nWhat song do you want to play?")
+    if Rick == True:
+        if input == 1:
+            sound = mixer.Sound("Mice On Venus.wav")
+        elif input == 2:
+            sound = mixer.Sound("Mice On Venus.wav")
+        elif input == 3:
+            sound = mixer.Sound("Mice On Venus.wav")
+        elif input == 4:
+            sound = mixer.Sound("Mice On Venus.wav")
+        elif input == 5:
+            sound = mixer.Sound("Mice On Venus.wav")
+        elif input == 6:
+            sound = mixer.Sound("Mice On Venus.wav")
+        elif input == 7:
+            sound = mixer.Sound("Mice On Venus.wav")
+
+    else:
+        sound = mixer.Sound("RickRoll.wav")
+    print("Press ctrl+c to stop")
     sound.play()
     try:
         prevState = True
@@ -26,7 +57,7 @@ def main():
     except KeyboardInterrupt:
         GPIO.cleanup()
         sound.play()
-        print("Press ctrl+c to stop")
+        
         exit()
     
 main()
