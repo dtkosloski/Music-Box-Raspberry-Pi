@@ -26,31 +26,54 @@ def main():
              7. Mellohi
              8. Mice on Venus"""
     )
-    
-    input = ("\nWhat song do you want to play?")
-    if Rick == False:
-        if input == 1:
-            sound = mixer.Sound("C418 - Blocks (Minecraft Volume Beta).wav")
-        elif input == 2:
-            sound = mixer.Sound("C418 - Stal (Minecraft Volume Beta).wav")
-        elif input == 3:
-            sound = mixer.Sound("C418 - Strad (Minecraft Volume Beta).wav")
-        elif input == 4:
-            sound = mixer.Sound("Cat.wav")
-        elif input == 5:
-            sound = mixer.Sound("Chirp.wav")
-        elif input == 6:
-            sound = mixer.Sound("Pigstep.wav")
-        elif input == 7:
-            sound = mixer.Sound("Mellohi.wav")
-        elif input == 8:
-            sound = mixer.Sound("Mice On Venus.wav")
-        elif input == 9:
-            Rick == True
+    input = ""
+    while input != "E":
+        input = ("\nWhat song do you want to play?")
+        if Rick == False:
+            sound.stop()
+            if input == 1:
+                sound = mixer.Sound("C418 - Blocks (Minecraft Volume Beta).wav")
+            elif input == 2:
+                sound = mixer.Sound("C418 - Stal (Minecraft Volume Beta).wav")
+            elif input == 3:
+                sound = mixer.Sound("C418 - Strad (Minecraft Volume Beta).wav")
+            elif input == 4:
+                sound = mixer.Sound("Cat.wav")
+            elif input == 5:
+                sound = mixer.Sound("Chirp.wav")
+            elif input == 6:
+                sound = mixer.Sound("Pigstep.wav")
+            elif input == 7:
+                sound = mixer.Sound("Mellohi.wav")
+            elif input == 8:
+                sound = mixer.Sound("Mice On Venus.wav")
+            elif input == 9:
+                Rick == True
+        else:
+            sound = mixer.Sound("Rick Astley - Never Gonna Give You Up (Official Music Video).wav")
+            print("""Pick a song! (1-8)
+             1. Blocks
+             2. Stal
+             3. Strad
+             4. Cat
+             5. Chirp
+             6. Pigstep
+             7. Mellohi
+             8. Mice on Venus""")
+            input = ("\nWhat song do you want to play?")
 
-    else:
-        sound = mixer.Sound("Rick Astley - Never Gonna Give You Up (Official Music Video).wav")
-    print("Press ctrl+c to stop")
+        print("""Pick an option! (1-8)
+             1. Blocks
+             2. Stal
+             3. Strad
+             4. Cat
+             5. Chirp
+             6. Pigstep
+             7. Mellohi
+             8. Mice on Venus
+             S. Stop
+             E. Exit""")
+        input =("\n")
     sound.play()
     try:
         prevState = True
