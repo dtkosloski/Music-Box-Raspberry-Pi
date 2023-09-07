@@ -17,34 +17,39 @@ def main():
     
     Rick = False
     print("""Pick a song! (1-8)
-             1. Song #1
-             2. Song #2
-             3. Song #3
-             4. Song #4
-             5. Song #5
-             6. Song #6
-             7. Song #7"""
+             1. Blocks
+             2. Stal
+             3. Strad
+             4. Cat
+             5. Chirp
+             6. Pigstep
+             7. Mellohi
+             8. Mice on Venus"""
     )
     
     input = ("\nWhat song do you want to play?")
-    if Rick == True:
+    if Rick == False:
         if input == 1:
-            sound = mixer.Sound("Mice On Venus.wav")
+            sound = mixer.Sound("C418 - Blocks (Minecraft Volume Beta).wav")
         elif input == 2:
-            sound = mixer.Sound("Mice On Venus.wav")
+            sound = mixer.Sound("C418 - Stal (Minecraft Volume Beta).wav")
         elif input == 3:
-            sound = mixer.Sound("Mice On Venus.wav")
+            sound = mixer.Sound("C418 - Strad (Minecraft Volume Beta).wav")
         elif input == 4:
-            sound = mixer.Sound("Mice On Venus.wav")
+            sound = mixer.Sound("Cat.wav")
         elif input == 5:
-            sound = mixer.Sound("Mice On Venus.wav")
+            sound = mixer.Sound("Chirp.wav")
         elif input == 6:
-            sound = mixer.Sound("Mice On Venus.wav")
+            sound = mixer.Sound("Pigstep.wav")
         elif input == 7:
+            sound = mixer.Sound("Mellohi.wav")
+        elif input == 8:
             sound = mixer.Sound("Mice On Venus.wav")
+        elif input == 9:
+            Rick == True
 
     else:
-        sound = mixer.Sound("RickRoll.wav")
+        sound = mixer.Sound("Rick Astley - Never Gonna Give You Up (Official Music Video).wav")
     print("Press ctrl+c to stop")
     sound.play()
     try:
