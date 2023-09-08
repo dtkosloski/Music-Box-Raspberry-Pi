@@ -14,7 +14,7 @@ def play(prevState,currentState,sound):
 
 def main():
     mixer.init()#initializes the audio mixer (via the constructor)
-    
+    sound = mixer.Sound("Mice On Venus.wav")
     Rick = False
     print("""Pick a song! (1-8)
              1. Blocks
@@ -28,7 +28,7 @@ def main():
     )
     input = ""
     while input != "E":
-        input = ("\nWhat song do you want to play?")
+        input = input("\nWhat song do you want to play?")
         if Rick == False:
             sound.stop()
             if input == 1:
@@ -49,6 +49,8 @@ def main():
                 sound = mixer.Sound("Mice On Venus.wav")
             elif input == 9:
                 Rick == True
+            elif input == "S":
+                sound.stop()
         else:
             sound = mixer.Sound("Rick Astley - Never Gonna Give You Up (Official Music Video).wav")
             print("""Pick a song! (1-8)
@@ -60,9 +62,9 @@ def main():
              6. Pigstep
              7. Mellohi
              8. Mice on Venus""")
-            input = ("\nWhat song do you want to play?")
+            input = input("\nWhat song do you want to play?")
 
-        print("""Pick an option! (1-8)
+        print("""Pick an option! (1-8, S, E)
              1. Blocks
              2. Stal
              3. Strad
@@ -73,7 +75,7 @@ def main():
              8. Mice on Venus
              S. Stop
              E. Exit""")
-        input =("\n")
+        input = input("\n")
     sound.play()
     try:
         prevState = True
