@@ -26,30 +26,30 @@ def main():
              7. Mellohi
              8. Mice on Venus"""
     )
-    input = 11
-    while input != 0:
-        input = input("\nWhat song do you want to play?")
+    choice = 11
+    while choice != 0:
+        choice = input("\nWhat song do you want to play?")
         if Rick == False:
             sound.stop()
-            if input == 1:
+            if choice == 1:
                 sound = mixer.Sound("C418 - Blocks (Minecraft Volume Beta).wav")
-            elif input == 2:
+            elif choice == 2:
                 sound = mixer.Sound("C418 - Stal (Minecraft Volume Beta).wav")
-            elif input == 3:
+            elif choice == 3:
                 sound = mixer.Sound("C418 - Strad (Minecraft Volume Beta).wav")
-            elif input == 4:
+            elif choice == 4:
                 sound = mixer.Sound("Cat.wav")
-            elif input == 5:
+            elif choice == 5:
                 sound = mixer.Sound("Chirp.wav")
-            elif input == 6:
+            elif choice == 6:
                 sound = mixer.Sound("Pigstep.wav")
-            elif input == 7:
+            elif choice == 7:
                 sound = mixer.Sound("Mellohi.wav")
-            elif input == 8:
+            elif choice == 8:
                 sound = mixer.Sound("Mice On Venus.wav")
-            elif input == 10:
+            elif choice == 10:
                 Rick == True
-            elif input == 9:
+            elif choice == 9:
                 sound.stop()
         else:
             sound = mixer.Sound("Rick Astley - Never Gonna Give You Up (Official Music Video).wav")
@@ -62,7 +62,7 @@ def main():
              6. Pigstep
              7. Mellohi
              8. Mice on Venus""")
-            input = input("\nWhat song do you want to play?")
+            choice = input("\nWhat song do you want to play?")
 
         print("""Pick an option! (0-9)
              1. Blocks
@@ -75,7 +75,7 @@ def main():
              8. Mice on Venus
              9. Stop
              0. Exit""")
-        input = input("\n")
+        choice = input("\n")
     sound.play()
     try:
         prevState = True
