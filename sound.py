@@ -48,14 +48,14 @@ def main():
                 sound = mixer.Sound("Mellohi.wav")
             elif choice == 8:
                 sound = mixer.Sound("Mice On Venus.wav")
-            elif choice == 10:
-                Rick == True
+            #elif choice == 10:
+                #Rick == True
             elif choice == 9:
                 mixer.stop()
             if choice != 9:
                 sound.play()
         else:
-            sound = mixer.Sound("Rick Astley - Never Gonna Give You Up (Official Music Video).wav")
+            #sound = mixer.Sound("Rick Astley - Never Gonna Give You Up (Official Music Video).wav")
             print("""Pick a song! (1-8)
              1. Blocks
              2. Stal
