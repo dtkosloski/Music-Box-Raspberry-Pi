@@ -26,8 +26,8 @@ def main():
              7. Mellohi
              8. Mice on Venus"""
     )
-    input = ""
-    while input != "E":
+    input = 11
+    while input != 0:
         input = input("\nWhat song do you want to play?")
         if Rick == False:
             sound.stop()
@@ -47,9 +47,9 @@ def main():
                 sound = mixer.Sound("Mellohi.wav")
             elif input == 8:
                 sound = mixer.Sound("Mice On Venus.wav")
-            elif input == 9:
+            elif input == 10:
                 Rick == True
-            elif input == "S":
+            elif input == 9:
                 sound.stop()
         else:
             sound = mixer.Sound("Rick Astley - Never Gonna Give You Up (Official Music Video).wav")
@@ -64,7 +64,7 @@ def main():
              8. Mice on Venus""")
             input = input("\nWhat song do you want to play?")
 
-        print("""Pick an option! (1-8, S, E)
+        print("""Pick an option! (0-9)
              1. Blocks
              2. Stal
              3. Strad
@@ -73,8 +73,8 @@ def main():
              6. Pigstep
              7. Mellohi
              8. Mice on Venus
-             S. Stop
-             E. Exit""")
+             9. Stop
+             0. Exit""")
         input = input("\n")
     sound.play()
     try:
